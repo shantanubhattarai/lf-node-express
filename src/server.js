@@ -71,6 +71,6 @@ server.get('/deletefile/:filename', function(req, res){
       });
 });
 
-server.listen(config.port, function(){
-  console.log('server running on port ', config.port);
+server.listen(config.port, config.host, function(){
+  console.log(`server running at ${config.host} ${config.port}`);
 })
